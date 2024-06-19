@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TODO LIst</title>
+</head>
+
+<body>
+    <script>
+        let todoList = [];
+
+        function addTodo(todo) {
+            todoList.push(todo);
+        }
+
+        function removeTodo(index) {
+            todoList.splice(index, 1);
+        }
+
+        function displayTodos() {
+            console.log(todoList);
+        }
+
+        for (let i = 0; i < 3; i++) {
+            let list = prompt("Enter the 3 things you want to add in list")
+            todoList.push(list);
+        }
+
+        displayTodos();
+
+        var removebtn = prompt("Do You want to remove something for list (Y/N)")
+        if (removebtn == "Y") {
+            let index = parseInt(prompt("Index"));
+            removeTodo(index);
+            displayTodos();
+        } else {
+            console.log("Thanks")
+        }
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let ans = "";
+        let price = 0; // Initial Price Money
+
+        console.log(" !! WELCOME TO KBC !!");
+
+        for (let i = 0; i < 3; i++) {
+            let sum = i + 1; // Increment sum correctly
+            price = price + (1000 * sum);
+
+            // Question set 
+            switch (sum) {
+                case 1:
+                    ans = prompt("What does not grow on a tree according to a popular Hindi saying?\n [a: Money, b: Flower, c: Leaves, d: Fruits] : ");
+                    break;
+                case 2:
+                    ans = prompt("Which city is known as the Pink City in India?\n [a: Bangalore, b: Mysore, c: Jaipur, d: Kochi] : ");
+                    break;
+                case 3:
+                    ans = prompt("How many states are there in India?\n [a: 28, b: 29, c: 31, d: 30] : ");
+                    break;
+            }
+
+            // Check if the answer is correct, display the result and move to the next question
+            if (ans === "a" && sum === 1) {
+                console.log("Correct Answer! Your Prize Money is : ₹", price);
+                console.log("Next Question");
+            } else if (ans === "c" && sum === 2) {
+                console.log("Correct Answer! Your Prize Money is : ₹", price);
+                console.log("Next Question");
+            } else if (ans === "a" && sum === 3) {
+                console.log("Correct Answer! Your Prize Money is : ₹", price);
+                console.log("---------Congratulations! You Won The KBC---------");
+            } else {
+                console.log("Incorrect Answer!!\n---Better Luck Next time---");
+                break;
+            }
+        }
+    </script>
+</body>
+
+</html>

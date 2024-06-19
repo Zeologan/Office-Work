@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For loop KBC</title>
+</head>
+<body>
+    <h1>For Loop Game </h1>
+    <p>Check Console</p>
+    <script>
+        // Online Javascript Editor for free
+// Write, Edit and Run your Javascript code using JS Online Compiler
+
+let ans = "";
+let ans1 = "c";
+let ans2 = "a";
+let ans3 = "b";
+let sum = 0;
+let price = 0; // Initialize price to 0 instead of null
+
+console.log(" !! WELCOME TO KBC !!");
+
+for (let i = 1; i < 4; i++) {
+  sum = sum + 1;
+  price = price + (1000 * i);
+  if (sum == 1) {
+    ans = prompt("Which of the following is a programming language [a: Math, b: English, c: Python, d: Science]: ");
+    if (ans == ans1) {
+      console.log("Correct Answer", " ", "Your Prize Money is: ₹", price);
+      console.log("Next Question");
+    } else {
+      console.log("Better Luck Next time");
+      break;
+    }
+  } else if (sum == 2) {
+    ans = prompt("Which of the following is a mathematics language [a: Math, b: English, c: Python, d: Science]: ");
+    if (ans == ans2) {
+      console.log("Correct Answer", " ", "Your Prize Money is: ₹", price);
+      console.log("Next Question");
+      console.log();
+    } else {
+      console.log("Better Luck Next time");
+      break;
+    }
+  } else {
+    ans = prompt("Which of the following is a spoken language [a: Math, b: English, c: Python, d: Science]: ");
+    if (ans == ans3) {
+      console.log("Correct Answer", " ", "Your Prize Money is: ₹", price);
+      console.log("---------Congratulations! You Won The KBC---------");
+    } else {
+      console.log("Better Luck Next time");
+    }
+  }
+}
+
+    </script>
+</body>
+</html>

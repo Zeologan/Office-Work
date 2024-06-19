@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Do While Loop</title>
+</head>
+
+<body>
+    <script>
+        console.log("Welcome to MxPlayer");
+        console.log("Series Name: Money Heist");
+        let pay, skip, episode = 0;
+
+        do {
+            if (episode == 1) {
+                pay = prompt("To continue your entertainment, please Pay.(Pay / Cancel)").toLowerCase(); // ask to pay for more episode
+                if (pay == "pay") {
+                    while (episode < 10) {
+                        console.log("Watch Next episode");
+                        skip = prompt("Do you want to skip the episode? (Yes/ No)").toLowerCase(); // asking do you want to skip or not
+
+                        if (skip === "yes") {
+                            episode++;
+                            console.log("Episode " + episode + " has been skipped");
+                        } else {
+                            episode++; // Increment the episode number when not skipping
+                            console.log("Watching Episode " + episode + " ---------");
+                        }
+                    }
+                    // while loop ends 
+                } else {
+                    console.log("Free Trial Ends");
+                    break;
+                }
+                // ( pay )if else condition end 
+            } else {
+                console.log("One free episode has been completed");
+                episode++;
+            }
+        } while (episode > 0);
+
+        console.log("The series has ended");
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Crafting</title>
+</head>
+
+<body>
+    <script> 
+        let userInput = prompt("Enter a string:");
+
+        do {
+             // Get user input
+            let transform = prompt("What would you like to do with this string (Reverse, Capital, Size, Search, Repeat)?").toLowerCase();
+
+            // Perform the selected transformation on the user input
+            if (transform == "reverse") {
+                let str = userInput.split("").reverse().join(""); //split the given letter , reverse it and then join agian
+                console.log(`Reversed String: ${str}`);//-----use backtick-----
+
+            } else if (transform == "capital") {
+                let str = userInput.toUpperCase(); // convert into Capital Letter
+                console.log(`Capitalized Words: ${str}`); 
+
+            } else if (transform == "size") {
+                let str = userInput.length; // find the length of string
+                console.log(`Size of String: ${str}`);
+
+            } else if (transform == "search") {
+                var find = prompt('Search string or word').toLowerCase(); // convert given string into smaller letter
+                let str = userInput.includes(find); // find the letter or word exist in given string [return (boolean value)]
+                console.log(`${find} : ${str}`);
+
+            } else if (transform == "repeat") {
+                let num = prompt('How many times do you want to repeat the string?');
+                let str = userInput.repeat(num); // repeat the string no.of times
+                console.log(`Repeated String: ${str}`);
+
+            } else {
+                console.log(`Please choose a correct option.`);
+            }
+
+            var loop = parseInt(prompt(`Do You Want to Perform Another Opration on string(1. Yes/ 0. No ))`))
+        }
+        while (loop > 0)
+
+
+    </script>
+
+</body>
+
+</html>

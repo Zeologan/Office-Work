@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- icon  -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <title>chat box</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+            text-decoration: none;
+        }
+        
+        html,
+        body {
+            height: 100%;
+            width: 100%;
+        }
+
+        body {
+            background-color: #f6faee;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            box-shadow: 0px 8px 10px 0px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+            border-radius: 20px;
+            width: 280px;
+            height: 480px;
+            position: relative;
+            background-image: url(https://user-images.githubusercontent.com/15075759/28719144-86dc0f70-73b1-11e7-911d-60d70fcded21.png);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            overflow: hidden;
+
+        }
+
+        .nav {
+            width: 280px;
+            height: 4rem;
+            border-radius: 20px 20px 0px 0px;
+            background-color: cadetblue;
+            box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
+            z-index: 1000;
+            position: fixed;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .nav .view {
+            display: flex;
+            align-items: center;
+        }
+
+        .nav i {
+            color: white;
+            margin-right: 5px;
+        }
+
+        .profile {
+            background-color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+
+        .profile img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: top;
+        }
+
+        h5 {
+            font-size: 16px;
+            font-weight: 300;
+            color: white;
+            margin-left: 5px;
+        }
+
+        .icon {
+            color: white;
+        }
+
+        .icon i {
+            margin-left: 5px;
+        }
+
+        /* bottom part  */
+        .chat {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: absolute;
+            padding: 0px 8px;
+            bottom: 10px;
+        }
+
+        #chatarea {
+            width: 220px;
+            height: 38px;
+            border-radius: 30px;
+            background-color: white;
+            padding: 15px;
+            border: none;
+            outline: none;
+            box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.1);
+
+        }
+
+        .speak {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: cadetblue;
+            margin-left: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.1);
+        }
+
+        .speak i {
+            color: white;
+            font-size: 20px;
+        }
+        .reply{
+            position: absolute;
+            bottom: 70px;
+            right: 10px;
+            padding: 5px 10px;
+            z-index: 10;
+            border-radius: 20px 0px 20px 20px;
+            background-color: white;  
+            font-size: 11px;        
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="nav">
+            <div class="view">
+                <i class="fa-solid fa-arrow-left"></i>
+                <div class="profile">
+                    <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                        alt="">
+                </div>
+                <h5>Sayli Roi</h5>
+            </div>
+            <div class="icon">
+                <i class="fa-solid fa-video"></i>
+                <i class="fa-solid fa-phone"></i>
+                <i class="fa-solid fa-ellipsis-vertical"></i>
+            </div>
+        </div>
+
+        <p class="reply">Hey !!</p>
+        <!-- bottom part -->
+        <div class="chat">
+            <input type="text" placeholder="Text Here" id="chatarea">
+            <div class="speak">
+                <i class='bx bxs-send'></i>
+            </div>
+        </div>
+
+
+    </div>
+</body>
+
+</html>
